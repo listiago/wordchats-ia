@@ -153,25 +153,25 @@ const basePrices = {
 // Array de 5 links por plano (1 conexão, 2 conexões, 3 conexões, 4 conexões, 5 conexões)
 const planLinks = {
     starter: [
-        '#',  // 1 conexão - SUBSTITUA pelo link real
-        '#',  // 2 conexões - SUBSTITUA pelo link real
-        '#',  // 3 conexões - SUBSTITUA pelo link real
-        '#',  // 4 conexões - SUBSTITUA pelo link real
-        '#'   // 5 conexões - SUBSTITUA pelo link real
+        'https://buy.stripe.com/8x214n7345EpajdaBL5Vu06',  // 1 conexão
+        'https://buy.stripe.com/4gM14ndrs5Ep8b5eS15Vu09',  // 2 conexões
+        'https://buy.stripe.com/28E6oHcno8QBbnhcJT5Vu0a',  // 3 conexões
+        'https://buy.stripe.com/4gMeVd4UW1o90IDfW55Vu0b',  // 4 conexões
+        'https://buy.stripe.com/3cI7sL4UW2sdfDx4dn5Vu0c'   // 5 conexões
     ],
     pro: [
-        '#',  // 1 conexão - SUBSTITUA pelo link real
-        '#',  // 2 conexões - SUBSTITUA pelo link real
-        '#',  // 3 conexões - SUBSTITUA pelo link real
-        '#',  // 4 conexões - SUBSTITUA pelo link real
-        '#'   // 5 conexões - SUBSTITUA pelo link real
+        'https://buy.stripe.com/3cIaEX1IK4AleztcJT5Vu07',  // 1 conexão
+        'https://buy.stripe.com/14AaEX4UW7Mxezt5hr5Vu0d',  // 2 conexões
+        'https://buy.stripe.com/14A9AT9bc3wh771h095Vu0g',  // 3 conexões
+        'https://buy.stripe.com/bJe9ATgDE4Aldvp25f5Vu0e',  // 4 conexões
+        'https://buy.stripe.com/9B6bJ12MOaYJajd39j5Vu0f'   // 5 conexões
     ],
     business: [
-        '#',  // 1 conexão - SUBSTITUA pelo link real
-        '#',  // 2 conexões - SUBSTITUA pelo link real
-        '#',  // 3 conexões - SUBSTITUA pelo link real
-        '#',  // 4 conexões - SUBSTITUA pelo link real
-        '#'   // 5 conexões - SUBSTITUA pelo link real
+        'https://buy.stripe.com/3cIbJ1bjk0k53UP9xH5Vu08',  // 1 conexão
+        'https://buy.stripe.com/9B600jafgc2NcrlbFP5Vu0h',  // 2 conexões
+        'https://buy.stripe.com/7sY14nevw5Ep0IDbFP5Vu0i',  // 3 conexões
+        'https://buy.stripe.com/8x2dR9bjk7Mxdvp9xH5Vu0j',  // 4 conexões
+        'https://buy.stripe.com/5kQeVdcno8QBcrl6lv5Vu0k'   // 5 conexões
     ]
 };
 
