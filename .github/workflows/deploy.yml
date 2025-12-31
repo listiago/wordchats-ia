@@ -12,52 +12,46 @@ jobs:
     steps:
     - name: 📥 Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
 
-    - name: 🔐 Setup SSH
+    - name: 🔧 Prepare files for deployment
       run: |
-        mkdir -p ~/.ssh/
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} >> ~/.ssh/known_hosts
+        echo "🧹 Removendo arquivos desnecessários..."
+        rm -rf .git
+        rm -rf .github
+        rm -f README.md
+        rm -f DEPLOY_AUTO.md
+        rm -f verify_links.py
+        rm -f deploy.sh
+        rm -f .gitignore
 
-    - name: 📤 Deploy to Hostinger
-      run: |
-        echo "🚀 Iniciando deploy..."
+        echo "📋 Arquivos que serão enviados:"
+        find . -type f -not -path './.*' | head -20
 
-        # Criar diretórios remotos
-        ssh -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << EOF
-          mkdir -p public_html/css
-          mkdir -p public_html/js
-          echo "📁 Diretórios criados"
-        EOF
-
-        # Upload dos arquivos essenciais
-        echo "📤 Enviando arquivos..."
-
-        scp -P ${{ secrets.SSH_PORT }} index.html ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/
-        scp -P ${{ secrets.SSH_PORT }} .htaccess ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/
-        scp -P ${{ secrets.SSH_PORT }} logo.png ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/
-        scp -P ${{ secrets.SSH_PORT }} favicon.ico ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/
-        scp -P ${{ secrets.SSH_PORT }} favicon-16x16.jpg ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/
-        scp -P ${{ secrets.SSH_PORT }} favicon-32x32.jpg ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/
-        scp -P ${{ secrets.SSH_PORT }} css/style.css ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/css/
-        scp -P ${{ secrets.SSH_PORT }} js/main.js ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/js/
-
-        echo "✅ Arquivos enviados!"
-
-        # Verificar deploy
-        ssh -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << EOF
-          echo "🔍 Verificando arquivos:"
-          ls -la public_html/
-          echo ""
-          echo "📁 CSS:"
-          ls -la public_html/css/
-          echo ""
-          echo "📁 JS:"
-          ls -la public_html/js/
-        EOF
+    - name: 📤 Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASS }}
+        port: ${{ secrets.FTP_PORT }}
+        local-dir: ./
+        server-dir: ${{ secrets.FTP_DIR }}
+        timeout: 300000
+        log-level: verbose
+        exclude: |
+          **/.git/**
+          **/.github/**
+          **/README.md
+          **/DEPLOY_AUTO.md
+          **/verify_links.py
+          **/deploy.sh
+          **/.gitignore
+          **/.*.swp
+          **/.*.tmp
 
     - name: 🎉 Deploy Complete
       run: |
         echo "✅ Deploy concluído com sucesso!"
-        echo "🌐 Site atualizado automaticamente"
+        echo "🌐 Site atualizado automaticamente via FTP"
