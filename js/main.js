@@ -161,7 +161,7 @@ const planLinks = {
     ],
     pro: [
         'https://buy.stripe.com/3cIaEX1IK4AleztcJT5Vu07',  // 1 conexão
-        'https://buy.stripe.com/14AaEX4UW7Mxezt5hr5Vu0d',  // 2 conexões
+        'https://buy.stripe.com/14AaEX4UW7Mxezt5hr5Vu0d',  //ts 2 conexões
         'https://buy.stripe.com/14A9AT9bc3wh771h095Vu0g',  // 3 conexões
         'https://buy.stripe.com/bJe9ATgDE4Aldvp25f5Vu0e',  // 4 conexões
         'https://buy.stripe.com/9B6bJ12MOaYJajd39j5Vu0f'   // 5 conexões
