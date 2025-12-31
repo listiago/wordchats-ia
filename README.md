@@ -1,8 +1,8 @@
 # WordChats IA - Landing Page de Planos de  ts2 Inteligência Artificial
 
-Landing page moderna e otimizada para SEO focada nos planos de IA do WordChats para WhatsApp.
+Landing page moderna e otimizada para SEO focada nos planos de IA do WordChats para WhatsApp. 
 
-## 📋 Índice
+## 📋 Índice aa
 
 - [Visão Geral](#visão-geral)
 - [Funcionalidades](#funcionalidades)
