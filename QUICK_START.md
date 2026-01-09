@@ -58,7 +58,7 @@ Em `index.html`, procure e substitua:
 1. **WhatsApp** (aparece 3 vezes):
    - Linha ~782: Botão flutuante
    - Linha ~765: CTA section
-   - Busque por: `5581973378920`
+   - Busque por: `5581973431176`
 
 2. **Redes Sociais** (rodapé):
    - Instagram: `https://instagram.com/wordchatss`
@@ -191,13 +191,13 @@ Repita para Pro e Business.
 
 ### Botão de WhatsApp não funciona
 
-**Solução**: Troque `5581973378920` pelo seu número (com DDI)
+**Solução**: Troque `5581973431176` pelo seu número (com DDI)
 
 ---
 
 ## 📞 Precisa de Ajuda?
 
-WhatsApp: **(81) 97337-8920**
+WhatsApp: **(81) 97343-1176**
 
 ---
 

@@ -130,10 +130,10 @@ Em `index.html`, procure e atualize:
 
 ```html
 <!-- WhatsApp Float Button (linha ~782) -->
-<a href="https://wa.me/5581973378920" class="whatsapp-float">
+<a href="https://wa.me/5581973431176" class="whatsapp-float">
 
 <!-- CTA Section (linha ~765) -->
-<a href="https://wa.me/5581973378920?text=Olá, quero saber mais sobre os planos de IA">
+<a href="https://wa.me/5581973431176?text=Olá, quero saber mais sobre os planos de IA">
 ```
 
 ### 3. Adicionar Imagens (Opcional)
@@ -444,7 +444,7 @@ python -m http.server 8000
 
 ### Dúvidas ou Problemas?
 
-- **WhatsApp**: (81) 97337-8920
+- **WhatsApp**: (81) 97343-1176
 - **Site**: https://wordchats.com.br
 - **Instagram**: @wordchatss
 - **YouTube**: @wordchats

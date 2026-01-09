@@ -312,7 +312,7 @@ footer_section = """
                 <div class="footer-contact">
                     <h4>Contato</h4>
                     <ul>
-                        <li><i class="fab fa-whatsapp"></i> (81) 97337-8920</li>
+                        <li><i class="fab fa-whatsapp"></i> (81) 97343-1176</li>
                         <li><i class="fas fa-globe"></i> wordchats.com.br</li>
                         <li><i class="fab fa-instagram"></i> @wordchatss</li>
                         <li><i class="fab fa-youtube"></i> @wordchats</li>
@@ -326,7 +326,7 @@ footer_section = """
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5581973378920?text=Olá,%20quero%20saber%20mais%20sobre%20os%20planos%20de%20IA"
+    <a href="https://wa.me/5581973431176?text=Olá,%20quero%20saber%20mais%20sobre%20os%20planos%20de%20IA"
        class="whatsapp-float"
        target="_blank"
        rel="noopener noreferrer">

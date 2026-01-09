@@ -309,7 +309,7 @@ O JavaScript já estava configurado corretamente e funciona perfeitamente com a 
 **2. Redes Sociais (anteriormente "Contato"):**
 - ✅ Título alterado: "Contato" → "Redes Sociais"
 - ❌ Removido: Link do site (wordchats.com.br)
-- ✅ WhatsApp: Link clicável → `https://wa.me/5581973378920`
+- ✅ WhatsApp: Link clicável → `https://wa.me/5581973431176`
 - ✅ Instagram: Link clicável → `https://instagram.com/wordchatss`
 - ✅ YouTube: Link clicável → `https://www.youtube.com/@wordchats`
 
