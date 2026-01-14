@@ -5,7 +5,7 @@
 ### Passo 1: Abra o arquivo no navegador
 
 ```bash
-# Clique duas vezes em:
+# Clique duas vezes em .:
 index.html
 ```
 
