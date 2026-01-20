@@ -23,7 +23,7 @@
     /* Text Colors - Light for dark theme */
     --text-color: #f1f5f9;
     --text-secondary: #cbd5e1;
-    --text-tertiary: #94a3b8;
+    --text-tertiary: #a8b5c4;
 
     /* Borders */
     --border-color: rgba(148, 163, 184, 0.1);
@@ -1491,7 +1491,7 @@ button.faq-question:focus-visible {
     background: rgba(139, 92, 246, 0.05);
 }
 
-.faq-question h4 {
+.faq-question-text {
     margin: 0;
     font-size: 1.125rem;
     font-weight: 600;
@@ -1654,9 +1654,12 @@ button.faq-question:focus-visible {
 }
 
 .footer-section h3,
-.footer-section h4 {
+.footer-section h4,
+.footer-title {
     margin-bottom: var(--spacing-md);
     color: var(--text-color);
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 .footer-logo-container {
@@ -2029,8 +2032,11 @@ button.faq-question:focus-visible {
     box-shadow: var(--glow-primary);
 }
 
-.testimonial-author-info h4 {
+.testimonial-author-info cite {
+    display: block;
+    font-style: normal;
     font-size: var(--font-size-lg);
+    font-weight: 700;
     color: var(--text-color);
     margin-bottom: 0.25rem;
 }
