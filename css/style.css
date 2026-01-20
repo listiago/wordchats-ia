@@ -251,6 +251,19 @@ img {
     color: var(--primary-color);
 }
 
+.btn-white {
+    background: white;
+    color: var(--primary-dark);
+    border: 2px solid white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-white:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
 .btn-gradient {
     background: var(--gradient-primary);
     color: white;
@@ -368,6 +381,20 @@ img {
     font-size: var(--font-size-2xl);
     cursor: pointer;
     color: var(--text-color);
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+.nav-toggle:focus,
+.nav-close:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.nav-toggle:focus:not(:focus-visible),
+.nav-close:focus:not(:focus-visible) {
+    outline: none;
 }
 
 .nav-mobile-btns {
@@ -1299,6 +1326,41 @@ section {
     color: var(--text-tertiary);
 }
 
+/* New Feature Badge in Pricing */
+.pricing-features li.feature-new {
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(244, 114, 182, 0.05) 100%);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius);
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.badge-new {
+    display: inline-flex;
+    align-items: center;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-left: 0.5rem;
+    box-shadow: 0 2px 8px rgba(167, 139, 250, 0.3);
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(167, 139, 250, 0.3);
+    }
+    50% {
+        box-shadow: 0 2px 16px rgba(167, 139, 250, 0.6);
+    }
+}
+
 .pricing-btn {
     margin-top: auto;
 }
@@ -1319,6 +1381,47 @@ section {
 .pricing-footer i {
     color: var(--accent-color);
     margin-right: 0.5rem;
+}
+
+/* Pricing Guarantee */
+.pricing-guarantee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, rgba(52, 211, 153, 0.05) 100%);
+    border: 2px solid rgba(52, 211, 153, 0.3);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    max-width: 600px;
+    margin: var(--spacing-xl) auto 0;
+    backdrop-filter: blur(10px);
+}
+
+.pricing-guarantee i {
+    font-size: var(--font-size-3xl);
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.pricing-guarantee div h4 {
+    font-size: var(--font-size-lg);
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.pricing-guarantee div p {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .pricing-guarantee {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-lg);
+    }
 }
 
 /* ==================== FAQ Section ==================== */
@@ -1355,14 +1458,33 @@ section {
     box-shadow: var(--shadow-colored);
 }
 
-.faq-question {
+button.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 2.5rem;
-    cursor: pointer;
     user-select: none;
     transition: all 0.3s ease;
+}
+
+button.faq-question:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+button.faq-question:focus:not(:focus-visible) {
+    outline: none;
+}
+
+button.faq-question:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .faq-question:hover {
@@ -1391,6 +1513,10 @@ section {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer[hidden] {
+    display: none;
 }
 
 .faq-item.active .faq-answer {
@@ -1540,7 +1666,8 @@ section {
     margin-bottom: var(--spacing-md);
 }
 
-.footer-logo-img {
+.footer-logo-img,
+.footer-logo {
     height: 36px;
     width: auto;
     filter: brightness(1.2);

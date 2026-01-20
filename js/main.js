@@ -68,17 +68,34 @@ const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
 
     question.addEventListener('click', () => {
+        const isExpanded = question.getAttribute('aria-expanded') === 'true';
+
         // Close other items
         faqItems.forEach(otherItem => {
             if (otherItem !== item) {
                 otherItem.classList.remove('active');
+                const otherQuestion = otherItem.querySelector('.faq-question');
+                const otherAnswer = otherItem.querySelector('.faq-answer');
+                if (otherQuestion) {
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                }
+                if (otherAnswer) {
+                    otherAnswer.setAttribute('hidden', '');
+                }
             }
         });
 
         // Toggle current item
         item.classList.toggle('active');
+        question.setAttribute('aria-expanded', !isExpanded);
+        if (isExpanded) {
+            answer.setAttribute('hidden', '');
+        } else {
+            answer.removeAttribute('hidden');
+        }
     });
 });
 
