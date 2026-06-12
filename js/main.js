@@ -156,29 +156,30 @@ const basePrices = {
     business: 297
 };
 
-// ⚠️ IMPORTANTE: Adicione os links dos seus planos aqui
+// Conexões dinâmicas (2026-06-11): 1 plano por tier + seletor de conexões
+// no /assinar (?connections=N pré-seleciona a quantidade)
 // Array de 5 links por plano (1 conexão, 2 conexões, 3 conexões, 4 conexões, 5 conexões)
 const planLinks = {
     starter: [
-        'https://buy.stripe.com/00w3cv0cN5Fr6nRaiV1ZS09',  // 1 conexão
-        'https://buy.stripe.com/4gM3cv0cN8RDaE71Mp1ZS00',  // 2 conexões
-        'https://buy.stripe.com/eVqeVd4t31pbfYr2Qt1ZS0c',  // 3 conexões
-        'https://buy.stripe.com/3cI7sL2kV5Frh2v3Ux1ZS0d',  // 4 conexões
-        'https://buy.stripe.com/aFaeVd4t3fg18vZ3Ux1ZS0e'   // 5 conexões
+        'https://app.wordchats.com.br/assinar?planId=19',                // 1 conexão
+        'https://app.wordchats.com.br/assinar?planId=19&connections=2',  // 2 conexões
+        'https://app.wordchats.com.br/assinar?planId=19&connections=3',  // 3 conexões
+        'https://app.wordchats.com.br/assinar?planId=19&connections=4',  // 4 conexões
+        'https://app.wordchats.com.br/assinar?planId=19&connections=5'   // 5 conexões
     ],
     pro: [
-        'https://buy.stripe.com/28E00j6Bb8RD3bF3Ux1ZS0a',  // 1 conexão
-        'https://buy.stripe.com/28E28raRr7NzdQj8aN1ZS01',  //ts 2 conexões
-        'https://buy.stripe.com/4gMcN5gbL9VHdQj1Mp1ZS03',  // 3 conexões
-        'https://buy.stripe.com/8x2fZh5x7fg15jNcr31ZS0f',  // 4 conexões
-        'https://buy.stripe.com/aFa14n8Jj0l73bF8aN1ZS0g'   // 5 conexões
+        'https://app.wordchats.com.br/assinar?planId=20',                // 1 conexão
+        'https://app.wordchats.com.br/assinar?planId=20&connections=2',  // 2 conexões
+        'https://app.wordchats.com.br/assinar?planId=20&connections=3',  // 3 conexões
+        'https://app.wordchats.com.br/assinar?planId=20&connections=4',  // 4 conexões
+        'https://app.wordchats.com.br/assinar?planId=20&connections=5'   // 5 conexões
     ],
     business: [
-        'https://buy.stripe.com/28E9AT4t31pb27BaiV1ZS0b',  // 1 conexão
-        'https://buy.stripe.com/6oUfZhaRr5FraE7cr31ZS02',  // 2 conexões
-        'https://buy.stripe.com/8x2eVd5x70l7bIbdv71ZS06',  // 3 conexões
-        'https://buy.stripe.com/bJecN50cNebXaE78aN1ZS0h',  // 4 conexões
-        'https://buy.stripe.com/8x2aEX7Ffd7TaE7ezb1ZS04'   // 5 conexões
+        'https://app.wordchats.com.br/assinar?planId=21',                // 1 conexão
+        'https://app.wordchats.com.br/assinar?planId=21&connections=2',  // 2 conexões
+        'https://app.wordchats.com.br/assinar?planId=21&connections=3',  // 3 conexões
+        'https://app.wordchats.com.br/assinar?planId=21&connections=4',  // 4 conexões
+        'https://app.wordchats.com.br/assinar?planId=21&connections=5'   // 5 conexões
     ]
 };
 
