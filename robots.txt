@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wordchats.com.br/sitemap.xml
+Sitemap: https://ia.wordchats.com.br/sitemap.xml
